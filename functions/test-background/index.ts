@@ -7,11 +7,15 @@ function createServer() {
   const router = Router()
 
   router.get('/health', (_: Request, res: Response) => {
+    // eslint-disable-next-line no-console
+    console.log({ message: 'OK' })
     res.status(200).json({ message: 'OK' })
   })
 
   router.post(
     '/battery-cells', (_: Request, res: Response) => {
+      // eslint-disable-next-line no-console
+      console.log({ message: 'Battery Cells' })
       res.status(200).json({ message: 'Battery Cells' })
     }
   )
