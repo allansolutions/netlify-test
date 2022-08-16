@@ -15,17 +15,5 @@ status = 200
 CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
 TERM = "xterm"
 
-[[plugins]]
-package = "netlify-plugin-contextual-env"
-# See https://github.com/cball/netlify-plugin-contextual-env#readme
-[plugins.inputs]
-mode = 'suffix'
-[[plugins]]
-package = "netlify-plugin-inline-functions-env-typescript"
-[plugins.inputs]
-verbose = false
-buildEvent = "onBuild"
-inlineAll = true
-
 [functions]
 external_node_modules = ["express", "@sentry/serverless", "superagent-proxy"]
