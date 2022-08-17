@@ -20,6 +20,12 @@ function createServer() {
     }
   )
 
+  router.post('/anodes', (_: Request, res: Response) => {
+    // eslint-disable-next-line no-console
+    console.log({ message: 'Anodes' })
+    res.status(200).json({ message: 'Anodes' })
+  })
+
   Settings.defaultZone = 'utc'
   app.use(json())
   app.use(urlencoded({ extended: true }))
